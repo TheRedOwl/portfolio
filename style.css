@@ -14,5 +14,8 @@ h1{
 }
 
 #home>.colorLabel{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     width: 600px;
 }

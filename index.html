@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="navbar-brand" href="#/">Home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -26,27 +26,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="attekintes">Áttekintő</a>
+                            <a class="nav-link active" aria-current="page" href="#/about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Tanulmányok</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Teljesítmény
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Tanulmányi</a></li>
-                                <li><a class="dropdown-item" href="#">Magán élet</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Projektek</a></li>
-                            </ul>
+                            <a class="nav-link active" href="#/projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">???</a>
+                            <a class="nav-link active" href="#/contacts" tabindex="-1" aria-disabled="true">Contacts</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -57,14 +43,39 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <div id="home">
-            <div class="colorLabel">
-                <h1>Várbogyai Ádám</h1>
-            </div>
-            <img src="imgs/Joe_Biden_presidential_portrait.jpg" alt="" class="MainImg img-fluid">
-        </div>
-    </div>
+    <div class="container"></div>
+
+    <script>
+        const routes = {
+            "": "home.html",
+            "about": "about.html",
+            "projects": "projects.html",
+            "contacts": "contacts.html"
+        }
+
+        const loadPage = async (url, domObj) => {
+            const response = await fetch(url)
+            const html = await response.text()
+            domObj.innerHTML = html
+        }
+
+        loadPage(routes[window.location.hash.substring(2)], document.querySelector(".container"))
+
+        let obj = document.querySelector(".container")
+        //loadPage("home.html",obj)
+
+        window.addEventListener("hashchange", () => {
+            //console.log(window.location.hash);
+            navigate()
+        })
+
+        function navigate() {
+            let hash = window.location.hash.substring(2)
+            console.log(hash);
+            let page = routes[hash] || "404.html"
+            loadPage(page, document.querySelector(".container"))
+        }
+    </script>
 </body>
 
 </html>
