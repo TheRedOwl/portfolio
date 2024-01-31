@@ -1,7 +1,42 @@
+html{
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+body{
+    margin: 0;
+}
+
+.panels{
+    min-height: 100vh;
+    display: flex;
+    font-size: 50px;
+}
+
+.panel{
+    flex: 1;
+    background-color: blueviolet;
+    box-shadow: 0 0 10px gray;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.7s cubic-bezier(0,.68,.91,.83);
+}
+
+.open{
+    flex: 5;
+}
+
 .MainImg{
     max-width: 400px;
     max-height: auto;
 }
+
 #home{
     padding-top: 20px;
     display: flex;
