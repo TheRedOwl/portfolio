@@ -2,7 +2,7 @@ html{
     box-sizing: border-box;
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 800;
 }
 
 body{
@@ -10,15 +10,16 @@ body{
 }
 
 .panels{
-    min-height: 100vh;
+    min-height: 30vh;
     display: flex;
     font-size: 50px;
+    color: whitesmoke;
+    -webkit-text-stroke: 2px rgb(31, 31, 31);
 }
 
 .panel{
     flex: 1;
     background-color: blueviolet;
-    box-shadow: 0 0 10px gray;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -53,4 +54,39 @@ h1{
     flex-direction: column;
     text-align: center;
     width: 600px;
+}
+
+.aboutPanels{
+    width: 100%;
+ margin-top: 10px;
+ margin-bottom: 20px;
+ padding: 15px;
+ border-radius: 15px;
+ box-shadow: 0 0 10px gray;
+}
+
+.aboutContent{
+    width: 100%;
+    min-height: 50vh;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutPageButtonLeft{
+    border-radius: 15px 0 0 15px;
+    height: 50vh;
+    width: 5%;
+}
+
+.aboutText{
+    height: 100%;
+    width: 90%;
+}
+
+.aboutPageButtonRight{
+    border-radius: 0 15px 15px 0;
+    height: 50vh;
+    width: 5%;
 }

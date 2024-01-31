@@ -1,0 +1,17 @@
+const url = "https://raw.githubusercontent.com/mkatay/json-drums/main/drums"
+        let key = []
+        getData(url, ButtonGenerator)
+
+        function ButtonGenerator(data) {
+            console.log(data);
+            data.forEach(element => {
+                key.push(element.key)
+                document.querySelector(".keys").innerHTML += `
+                <div class="button col-md-6">
+                    <kbd>${element.letter}</kbd>
+                    <span>${element.sound}</span>
+                    <audio id="k${element.key}" src="${element.url}"></audio>
+                </div>`
+
+            });
+        }

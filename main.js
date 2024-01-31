@@ -1,3 +1,4 @@
+
 import { motto,panelBackgrounds } from "./assets.js";
 
 console.log(motto);
