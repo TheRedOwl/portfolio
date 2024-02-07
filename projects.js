@@ -1,7 +1,7 @@
 import { getData } from "./assets.js";
 
 export const projects = () => {
-    const url = "https://raw.githubusercontent.com/TheRedOwl/portfolia-data/main/portfolioData.json";
+    const url = "https://raw.githubusercontent.com/TheRedOwl/portfolio/master/portfolioData.json";
     getData(url, ButtonGenerator);
 
     function ButtonGenerator(data) {
