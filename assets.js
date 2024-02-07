@@ -9,3 +9,10 @@ export const panelBackgrounds = [
     'https://source.unsplash.com/green-tractor-on-brown-grass-field-under-blue-sky-during-daytime-dDc0vuVH_LU'
 
 ];
+
+export const getData=
+    async (url,renderFc)=>{
+        const response=await fetch(url)
+        const data=await response.json()
+        renderFc(data)
+    }
