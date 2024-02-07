@@ -17,8 +17,10 @@ export const projects = () => {
             <div class="card-body projectButtons btn-group" role="group" aria-label="Basic example">
                 <a href="${element.hosted}" target="blank_" class="btn btn-primary">Go to the page!</a>
                 <a href="${element.github}" target="blank_" class="btn btn-primary"><i class="fa-brands fa-github fa-xl"></i></a>
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-image fa-xl"></i></button>
+                <button id="imgButton${element.id}" class="btn btn-primary projectButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-image fa-xl"></i></button>
             </div>`;
+
+            
 
             document.querySelector(".offcanvas-body").innerHTML += `<img src="${element.imgs}" alt="">`
         });
