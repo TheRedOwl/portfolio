@@ -1,7 +1,7 @@
 [{
     "id":1,
-    "name":"drums",
-    "description":"simple website",
+    "name":"Drums",
+    "description":"Egy dobos weboldal ahol az adott billentyűt lenyomva, az adott hangot adja ki.",
     "img":"https://ibb.co/ftSpfpZ",
     "imgs":"https://ibb.co/6D9ZzKC",
     "github":"https://github.com/TheRedOwl/Drums",
@@ -9,8 +9,8 @@
 },
 {
     "id":2,
-    "name":"travel_agency",
-    "description":"sincle websánc",
+    "name":"Travel agency",
+    "description":"Egy utazási iroda rövid projektje, fontos szerepe a dark mode bemutatása.",
     "img":"https://ibb.co/3SgJkp8",
     "imgs":"https://ibb.co/pX69j77",
     "github":"https://github.com/TheRedOwl/Tours",
