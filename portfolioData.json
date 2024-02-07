@@ -2,8 +2,8 @@
     "id":1,
     "name":"Drums",
     "description":"Egy dobos weboldal ahol az adott billentyűt lenyomva, az adott hangot adja ki.",
-    "img":"https://i.ibb.co/N69W44Y/N-vtelen.png",
-    "imgs":"https://ibb.co/6D9ZzKC",
+    "img":"https://i.ibb.co/TcPCByS/K-perny-felv-tel-2.png",
+    "imgs":"https://i.ibb.co/N69W44Y/N-vtelen.png",
     "github":"https://github.com/TheRedOwl/Drums",
     "hosted":"https://theredowl.github.io/Drums/"
 },
@@ -11,8 +11,8 @@
     "id":2,
     "name":"Travel agency",
     "description":"Egy utazási iroda rövid projektje, fontos szerepe a dark mode bemutatása.",
-    "img":"https://ibb.co/3SgJkp8",
-    "imgs":"https://ibb.co/pX69j77",
+    "img":"https://i.ibb.co/xMb3kph/K-perny-felv-tel-4.png",
+    "imgs":"https://i.ibb.co/x7PrznX/K-perny-felv-tel-5.png",
     "github":"https://github.com/TheRedOwl/Tours",
     "hosted":"https://theredowl.github.io/Tours/"
 }]
