@@ -17,6 +17,7 @@ export const about = () => {
     );
 
     document.querySelector(".panels").addEventListener("click", toggleOpen);
+
     const url = "https://raw.githubusercontent.com/TheRedOwl/portfolio/master/aboutInfo.json";
     
     getData(url, aboutText);
@@ -24,7 +25,7 @@ export const about = () => {
     function aboutText(aboutData){
         aboutData.forEach((elements) => {
             document.querySelector(".aboutText").innerHTML += `
-            <div class="d-flex">
+            <div class="id${elements.id}">
                 <div class="text">
                     <h2>${elements.topic}</h2>
                     <p>${elements.text}</p>
@@ -35,7 +36,7 @@ export const about = () => {
             </div>`
         })
     }
-
+""
     function toggleOpen(e) {
         const numbers=[1,2,3,4,5,6]
         if (e.target.classList.contains("open")) {
@@ -44,10 +45,11 @@ export const about = () => {
             panelsNList.forEach((obj) => obj.classList.remove("open"));
             e.target.classList.add("open");
             numbers.forEach((num)=>{
-                if(e.target.classList.contains(`id${num}`)){
-
-                }
+               if(e.target.classList.contains(`id${num}`)==true){
+                document.querySelector(`id${num}`).classList.toggle("d-flex")
+               }
             })
+            
 
         }
     }
