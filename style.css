@@ -126,7 +126,7 @@ h1{
     flex-direction: column;
 }
 
-.aboutText>h2{
+.text>h2{
     font-size: 3rem;
 }
 
@@ -140,6 +140,11 @@ h1{
 
 .open{
     flex: 5;
+}
+
+.pic{
+    max-width: 400px;
+    max-height: 500px;
 }
 
 
