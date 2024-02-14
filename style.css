@@ -1,3 +1,4 @@
+/*index*/
 html{
     box-sizing: border-box;
     font-family: "Bebas Neue", sans-serif;
@@ -10,6 +11,62 @@ body{
     background-color: rgb(115, 144, 114);
     color: rgb(236, 227, 206);
 }
+
+h1{
+    font-size: 4rem;
+}
+
+.nav-link, .navbar-brand{
+    color: rgb(236, 227, 206) !important;
+}
+
+.navbar{
+    background-color: rgb(58, 77, 57);
+}
+
+.card{
+    background-color: rgb(79, 111, 82);
+    box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
+    padding: 10px;
+    border-radius: 15px;
+    min-height: 420px;
+}
+
+.card>button{
+    padding: 0;
+}
+
+
+
+/*home*/
+
+.MainImg{
+    max-width: 400px;
+    max-height: auto;
+    border-right: 3px solid rgb(236, 227, 206);
+}
+
+#home{
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(79, 111, 82);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
+}
+
+#home>.colorLabel{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+}
+
+
+
+/*about*/
 
 .panels{
     min-height: 30vh;
@@ -29,37 +86,6 @@ body{
     background-size: cover;
     background-position: center;
     transition: flex 0.7s cubic-bezier(0,.68,.91,.83);
-}
-
-.open{
-    flex: 5;
-}
-
-.MainImg{
-    max-width: 400px;
-    max-height: auto;
-}
-
-#home{
-    margin-top: 50px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(79, 111, 82);
-    border-radius: 15px;
-    box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
-}
-
-h1{
-    font-size: 4rem;
-}
-
-#home>.colorLabel{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 600px;
 }
 
 .aboutPanels{
@@ -91,8 +117,17 @@ h1{
 }
 
 .aboutText{
-    height: 100%;
+    height: 50vh;
     width: 90%;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.aboutText>h2{
+    font-size: 3rem;
 }
 
 .aboutPageButtonRight{
@@ -103,33 +138,17 @@ h1{
     width: 5%;
 }
 
+.open{
+    flex: 5;
+}
+
+
+
+/*projects*/
+
 .projectButtons{
     display: flex;
     justify-content: space-around;
-}
-
-.modal-body{
-    display: flex;
-    justify-content: center;
-}
-
-.nav-link, .navbar-brand{
-    color: rgb(236, 227, 206) !important;
-}
-.navbar{
-    background-color: rgb(58, 77, 57);
-}
-
-.card{
-    background-color: rgb(79, 111, 82);
-    box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
-    padding: 10px;
-    border-radius: 15px;
-    min-height: 420px;
-}
-
-.card>button{
-    padding: 0;
 }
 
 .projectsData{
@@ -140,6 +159,24 @@ h1{
     background-color: rgb(58, 77, 57);
     color: rgb(236, 227, 206) !important;
 }
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(79, 111, 82);
+}
+
+.modal-header{
+    background-color: rgb(58, 77, 57);
+}
+
+.modal-content{
+    background-color: rgb(79, 111, 82);
+}
+
+
+
+/*contacts*/
 
 #contactCard{
     margin-top: 50px;
@@ -198,16 +235,4 @@ h1{
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.modal-header{
-    background-color: rgb(58, 77, 57);
-}
-
-.modal-body{
-    background-color: rgb(79, 111, 82);
-}
-
-.modal-content{
-    background-color: rgb(79, 111, 82);
 }

@@ -17,6 +17,9 @@ export const about = () => {
         } else {
             panelsNList.forEach((obj) => obj.classList.remove("open"));
             e.target.classList.add("open");
+            console.log(e.target);
         }
     }
+
+    
 };

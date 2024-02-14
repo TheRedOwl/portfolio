@@ -5,7 +5,6 @@ export const projects = () => {
     getData(url, ProjectCards);
 
     function ProjectCards(data) {
-        console.log(data);
         data.forEach((element) => {
             document.querySelector(".projectsData").innerHTML += `
             <div class="col">

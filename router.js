@@ -32,7 +32,7 @@ window.addEventListener("hashchange", () => {
 
 function navigate() {
     let hash = window.location.hash.substring(2)
-    console.log(hash);
+    //console.log(hash);
     let page = routes[hash] || "404.html"
     loadPage(page, document.querySelector(".container"))
 }
