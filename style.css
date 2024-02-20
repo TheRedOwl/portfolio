@@ -112,7 +112,6 @@ h1{
 .aboutContent{
     background-color: rgb(79, 111, 82);
     width: 100%;
-    min-height: 50vh;
     border-radius: 15px;
     box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
     display: flex;
@@ -123,12 +122,10 @@ h1{
     background-color: rgb(58, 77, 57);
     border-radius: 15px 0 0 15px;
     border: 0;
-    height: 50vh;
     width: 5%;
 }
 
 .aboutText{
-    height: 50vh;
     width: 90%;
     padding: 20px;
     display: flex;
@@ -146,7 +143,6 @@ h1{
     background-color: rgb(58, 77, 57);
     border-radius: 0 15px 15px 0;
     border: 0;
-    height: 50vh;
     width: 5%;
 }
 
@@ -155,8 +151,9 @@ h1{
 }
 
 .aboutImg{
-    max-width: 700px;
-    max-height: 400px;
+    width: 100%;
+    max-width: 500px;
+    max-height: auto;
 }
 
 .easterEgg{
