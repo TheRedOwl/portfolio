@@ -12,8 +12,7 @@ export const about = () => {
 
     let panelsNList = document.querySelectorAll(".panel");
     panelsNList.forEach(
-        (obj, index) =>
-            (obj.style.backgroundImage = `url(${panelBackgrounds[index]})`)
+        (obj, index) => (obj.style.backgroundImage = `url(${panelBackgrounds[index]})`)
     );
 
     document.querySelector(".panels").addEventListener("click", toggleOpen);
@@ -25,32 +24,48 @@ export const about = () => {
     function aboutText(aboutData){
         aboutData.forEach((elements) => {
             document.querySelector(".aboutText").innerHTML += `
-            <div class="id${elements.id}">
-                <div class="text">
-                    <h2>${elements.topic}</h2>
-                    <p>${elements.text}</p>
+            <div class="textId${elements.id} textPanels d-none row row-cols-1 row-cols-md-2">
+                <div class="col">
+                    <div class="text">
+                        <h2>${elements.topic}</h2>
+                        <p>${elements.text}</p>
+                    </div>
                 </div>
-                <div class="pic">
-                    <img src="${elements.picture}" class="img-fluid" alt="">
+                <div class="col">
+                    <img src="${elements.picture}" class="img-fluid aboutImg" alt="">
                 </div>
             </div>`
         })
     }
-""
+
+    document.querySelector(".textPanels").addEventListener("click", toggleOpen);
+
     function toggleOpen(e) {
         const numbers=[1,2,3,4,5,6]
         if (e.target.classList.contains("open")) {
             e.target.classList.remove("open");
+
+            document.querySelector(".mainAboutTextPanel").classList.remove("d-none")
+
+            numbers.forEach((num)=>{
+                if(e.target.classList.contains(`id${num}`)==true){
+                    document.querySelector(`.textId${num}`).classList.add("d-none")
+                    document.querySelector(`.textId${num}`).classList.remove("d-flex")
+                }
+            })
         } else {
+            document.querySelector(".mainAboutTextPanel").classList.add("d-none")
             panelsNList.forEach((obj) => obj.classList.remove("open"));
             e.target.classList.add("open");
-            numbers.forEach((num)=>{
-               if(e.target.classList.contains(`id${num}`)==true){
-                document.querySelector(`id${num}`).classList.toggle("d-flex")
-               }
-            })
-            
 
+            numbers.forEach((num)=>{
+                    document.querySelector(`.textId${num}`).classList.add("d-none")
+                    document.querySelector(`.textId${num}`).classList.remove("d-flex")
+                if(e.target.classList.contains(`id${num}`)==true){
+                    document.querySelector(`.textId${num}`).classList.remove("d-none")
+                    document.querySelector(`.textId${num}`).classList.add("d-flex")
+                }
+            })
         }
     }
 
