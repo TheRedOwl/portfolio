@@ -1,5 +1,6 @@
 import { about } from "./about.js"
 import { projects } from "./projects.js"
+import { contacts } from "./contacts.js"
 
 const routes = {
     "": "home.html",
@@ -17,6 +18,9 @@ const loadPage = async (url, domObj) => {
     }
     if(url=="projects.html"){
         projects()
+    }
+    if(url=="contacts.html"){
+        contacts()
     }
 }
 

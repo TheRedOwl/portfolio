@@ -11,7 +11,14 @@ body{
     font-style: normal;
     margin: 0;
     background-color: rgb(115, 144, 114);
+    background-image: url("https://i.ibb.co/NrfJTnF/photo-1541339246244-261d72e381b7.png");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
     color: rgb(236, 227, 206);
+    user-select: none;
+    color: rgb;
 }
 
 h1{
@@ -24,6 +31,17 @@ h1{
 
 .navbar{
     background-color: rgb(58, 77, 57);
+}
+
+.navbar-toggler-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(236, 227, 206);
+}
+
+.navIcon{
+    max-width: 50px;
 }
 
 .card{
@@ -42,11 +60,18 @@ h1{
 
 /*home*/
 
+@media only screen and (max-width: 767px) {
+    #colTextHome{
+        background-image: none !important; 
+    }
+}
+
 .MainImg{
     width: 100%;
     max-width: 400px;
     max-height: auto;
     border-right: 3px solid rgb(236, 227, 206);
+    background-color: rgba(79, 111, 82, 0);
 }
 
 #home{
@@ -55,7 +80,8 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(79, 111, 82);
+    background: rgb(115,144,114);
+    background: radial-gradient(circle, rgba(115,144,114,1) 2%, rgba(79,111,82,1) 30%, rgba(58,77,57,1) 63%);
     border-radius: 15px;
     box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
 }
@@ -77,6 +103,21 @@ h1{
     width: 100%;
 }
 
+#colTextHome{
+    background-image: url("https://i.ibb.co/44mTfsB/2a881ad812cdb2ab98c936b71dbda4e2.png");
+    background-repeat: no-repeat;
+    background-position: -200px 20%;
+    background-attachment: local;
+}
+
+#colTextHome::view-transition{
+    background-image: none;
+}
+
+#colImgHome{
+    background-color: rgba(79, 111, 82, 0);
+}
+
 /*about*/
 
 .panels{
@@ -85,6 +126,10 @@ h1{
     font-size: 50px;
     color: whitesmoke;
     -webkit-text-stroke: 2px rgb(31, 31, 31);
+}
+
+.panels:hover{
+    cursor: pointer;
 }
 
 .panel{
@@ -100,17 +145,20 @@ h1{
 }
 
 .aboutPanels{
-    background-color: rgb(79, 111, 82);
+    background-color: rgb(30, 51, 29);
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 50px;
+    padding: 25px;
     border-radius: 15px;
     box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
 }
 
 .aboutContent{
-    background-color: rgb(79, 111, 82);
+    background: rgb(58,77,57);
+    background: linear-gradient(162deg, rgba(58,77,57,1) 24%, rgba(79,111,82,1) 51%, rgba(115,144,114,1) 76%);
+    min-height: 300px;
+    margin-bottom: 50px;
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 5px 20px 5px rgb(31, 31, 31);
@@ -118,10 +166,11 @@ h1{
     justify-content: center;
 }
 
-.aboutPageButtonLeft{
-    background-color: rgb(58, 77, 57);
+.aboutPageTextLeft{
+    background-color: rgb(30, 51, 29);
     border-radius: 15px 0 0 15px;
     border: 0;
+    min-height: 300px;
     width: 5%;
 }
 
@@ -139,10 +188,11 @@ h1{
     font-size: 3rem;
 }
 
-.aboutPageButtonRight{
-    background-color: rgb(58, 77, 57);
+.aboutPageTextRight{
+    background-color: rgb(30, 51, 29);
     border-radius: 0 15px 15px 0;
     border: 0;
+    min-height: 300px;
     width: 5%;
 }
 
@@ -178,6 +228,92 @@ h1{
     justify-content: space-evenly;
 }
 
+@media only screen and (min-width: 1200px) {
+    .id1{
+        border-radius: 15px 0 0 15px;
+    }
+
+    .id3{
+        border-radius: 0;
+    }
+
+    .id6{
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .id1{
+        border-radius: 15px 0 0 0;
+    }
+
+    .id5{
+        border-radius: 0 15px 0 0;
+    }
+
+    .id6{
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .id1{
+        border-radius: 15px 0 0 0;
+    }
+
+    .id3{
+        border-radius: 0 0 0 0;
+    }
+
+    .id4{
+        border-radius: 0 15px 0 0;
+    }
+
+    .id5{
+        border-radius: 0 0 0 15px;
+    }
+
+    .id6{
+        border-radius: 0 0 15px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .id1{
+        border-radius: 15px 0 0 0;
+    }
+    
+    .id3{
+        border-radius: 0 15px 0 0;
+    }
+
+    .id4{
+        border-radius: 0 0 0 15px;
+    }
+
+    .id6{
+        border-radius: 0 0 15px 0;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .id1{
+        border-radius: 15px 0 0 0;
+    }
+    
+    .id2{
+        border-radius: 0 15px 0 0;
+    }
+
+    .id5{
+        border-radius: 0 0 0 15px;
+    }
+
+    .id6{
+        border-radius: 0 0 15px 0;
+    }
+}
+
 
 
 /*projects*/
@@ -192,7 +328,7 @@ h1{
 }
 
 .projectSingleButton{
-    background-color: rgb(58, 77, 57);
+    background-color: rgb(30, 51, 29);
     color: rgb(236, 227, 206) !important;
 }
 
@@ -203,11 +339,16 @@ h1{
 }
 
 .modal-header{
-    background-color: rgb(58, 77, 57);
+    background-color: rgb(30, 51, 29);
 }
 
 .modal-content{
     background-color: rgb(79, 111, 82);
+}
+
+#projectsCardHeader{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
 }
 
 
@@ -216,18 +357,24 @@ h1{
 
 #contactCard{
     margin-top: 50px;
+    margin-bottom: 50px;
     width: 100%;
     max-width: 600px;
+    padding: 0;
+    background-color: rgb(58,77,57);
 }
 
 .mailAndPhone{
+    margin: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .mailLi{
     display: flex;
     text-align: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .mailLi>p{
     margin-left: 20px;
@@ -240,21 +387,26 @@ h1{
 
 .contactsSocial{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .contactsSocial>.col{
+    height: 160px;
     display: flex;
     justify-content: center;
 }
 
 .contactsSocial>.col>a{
     width: 100%;
+    height: 100%;
     min-width: 50px;
     min-height: 50px;
-    max-height: 50px;
+    max-width: 150px;
+    max-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,7 +415,11 @@ h1{
 .contactSingleButton{
     width: 100%;
     height: 100%;
-    background-color: rgb(58, 77, 57);
+    background-color: rgb(30, 51, 29);
+    background-image: url("https://i.ibb.co/PTM7w58/istockphoto-468205873-1024x1024.png");
+    background-repeat: no-repeat;
+    background-position: -4px 0;
+    background-size: 150px;
     color: rgb(236, 227, 206) !important;
 }
 
@@ -271,4 +427,14 @@ h1{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.contactsButton{
+    cursor: pointer;
+}
+
+.card-header{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(30, 51, 29);
 }

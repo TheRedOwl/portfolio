@@ -8,10 +8,12 @@ export const projects = () => {
         data.forEach((element) => {
             document.querySelector(".projectsData").innerHTML += `
             <div class="col">
-                <div class="card" id="project${element.id}">
-                    <button id="imgButton${element.id}" class="btn projectSingleButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${element.id}"><img src="${element.img}" class="card-img-top" alt="..."></button>
-                    <div class="card-body">
+                <div class="card p-0 border-0" id="project${element.id}">
+                    <div class="card-header" id="projectsCardHeader">
                         <h2 class="card-title">${element.name}</h2>
+                    </div>
+                    <button id="imgButton${element.id}" class="btn projectSingleButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal${element.id}"><img src="${element.img}" class="card-img-top" alt="..."></button>
+                    <div class="card-body" id="projectsCardHeader">
                         <p class="card-text">${element.description}</p>
                     </div>
                     <div class="card-body projectButtons btn-group" role="group" aria-label="Basic example">
