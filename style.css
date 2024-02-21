@@ -133,6 +133,7 @@ h1{
 }
 
 .panel{
+    font-size: 6vh;
     flex: 1;
     background-color: rgb(58, 77, 57);
     text-transform: uppercase;
